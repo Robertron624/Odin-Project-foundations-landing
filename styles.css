@@ -33,7 +33,6 @@ ul[role="list"],
 ol[role="list"] {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 /* Set core body defaults */
@@ -121,6 +120,7 @@ body {
 
 
     --max-width: 960px;
+    --max-width-sm: 700px;
 
     padding: 0;
     margin: 0;
@@ -153,11 +153,11 @@ body {
     margin-inline: auto;
 }
 
-/* Header styles */
+/*-------------------------- HEADER styles --------------------*/
 
 header {
     background-color: var(--dark-bg);
-    color: var(--primary-white);
+    color: var(--secondary-white);
     padding: 1rem 0;
 }
 
@@ -167,6 +167,7 @@ header .inner {
 
 header .inner .logo-container {
     font-weight: 700;
+    font-size: 24px;
 }
 
 header .inner .logo-container {
@@ -186,9 +187,12 @@ header .inner nav ul {
 header .inner nav ul li a {
     text-decoration: none;
     font-weight: 500;
+    font-size: 18px;
 }
 
-/* main section styles */
+/* --------------- MAIN section styles ---------------------*/
+
+/* Hero section styles  */
 
 main .hero {
     color: var(--primary-white);
@@ -237,4 +241,102 @@ main .hero .inner .right .attribution {
     bottom: 0;
     right: 0;
     font-size: .8rem;
+}
+
+/* Random info section styles */
+
+main .random-info {
+    padding: 2rem 0;
+    color: var(--primary-dark);
+}
+
+main .random-info h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+main .random-info .info-cards {
+    max-width: var(--max-width-sm);
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+main .random-info .info-cards .card {
+
+    width: 120px;
+}
+
+main .random-info .info-cards .card img {
+    height: 120px;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+main .random-info .info-cards .card p {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Quote section styles */
+
+section.quote {
+    padding: 2rem 0;
+    background-color: var(--light-bg);
+    color: var(--primary-white);
+}
+
+section.quote p {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--dark-bg);
+    max-width: var(--max-width-sm);
+}
+
+section.quote p .author{
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    float: right;
+}
+
+/* Call to action section styles */
+
+section.cta {
+    padding: 4rem 0;
+    width: 100%;
+}
+
+section.cta .inner{
+    width: var(--max-width);
+    background-color: var(--accent);
+    color: var(--primary-white);
+    border-radius: 10px;
+    padding: 2rem 5.5rem;
+}
+
+section.cta .inner .left h2{
+    font-size: 1.2rem;
+}
+
+section.cta .inner button {
+    color: inherit;
+    border: 2px solid var(--primary-white);
+    padding: .1rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+/* ------------------ FOOTER section styles -----------------*/
+footer {
+    background-color: var(--dark-bg);
+    color: var(--secondary-white);
+    padding: 2rem 0;
+}
+
+footer p {
+    text-align: center;
 }
